@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>My Work</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header" class="header wrapper">
+        <div class="header__container container">
+            <h1 class="header__title">
+                <a class="header__link" href="#">
+                    <img class="header__logo" src="img/logo.svg">
+                </a>
+            </h1>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="#"><img class="icon-instagram" src="img/icon-instagram.png"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="main-visual" class="main-visual wrapper">
+        <picture class="main-visual__image">
+            <source class="image-sp" media="(width < 600px)" srcset="img/mainvisual-sp.jpg">
+            <img class="image-pc" src="img/mainvisual-pc.jpg">
+        </picture>
+    </div>
+
+    <section id="about" class="about wrapper">
+        <div class="about__container container">
+            <h2 class="about__section-title section-title">About</h2>
+            <p class="about__name">Xxxx Ashley</p>
+            <div class="about__info">
+                <p class="info-address">2th Floor xxxxx Building x-x-x Nishiazabu, Minato-ku, Tokyo 106-0031 Japan</p>
+                <p class="info-tel">tel: 000-0000-0000</p>
+                <p class="info-url">url: www.xxxxxx.jp</p>
+                <p class="info-email">mail: xxx@xxxxxx.jp</p>
+                <p class="infor-description">プロフィールテキストテキストテキストテキストテキストテキストテキストテキストテキストスト テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="works" class="works wrapper">
+        <div class="works__container container">
+            <h2 class="works__section-title section-title">Works</h2>
+            <ul class="works__list">
+                <li><a href="#"><img src="img/works1.jpg"></a></li>
+                <li><a href="#"><img src="img/works2.jpg"></a></li>
+                <li><a href="#"><img src="img/works3.jpg"></a></li>
+                <li><a href="#"><img src="img/works4.jpg"></a></li>
+                <li><a href="#"><img src="img/works5.jpg"></a></li>
+                <li><a href="#"><img src="img/works6.jpg"></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="news" class="news wrapper">
+        <div class="news__container container">
+            <h2 class="news__section-title section-title">News</h2>
+            <table class="news__list">
+                <tr>
+                    <th>2020.xx.xx</th>
+                    <td>デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</td>
+                </tr>
+                <tr>
+                    <th>2020.xx.xx</th>
+                    <td>デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</td>
+                </tr>
+                <tr>
+                    <th>2020.xx.xx</th>
+                    <td>デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</td>
+                </tr>
+                <tr>
+                    <th>2020.xx.xx</th>
+                    <td>デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</td>
+                </tr>
+                <tr>
+                    <th>2020.xx.xx</th>
+                    <td>デザイン雑誌「ＸＸＸＸＸＸ Vol.11』に掲載していただきました。</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="contact" class="contact wrapper">
+        <div class="contact__container container">
+            <h2 class="contact__section-title section-title">Contact</h2>
+            <form class="contact__form" action="#" method="post">
+                <dl>
+                    <dt><label for="name">NAME</label></dt>
+                    <dd><input type="text" id="name" name="your-name"></dd>
+
+                    <dt><label for="email">E-mail</label></dt>
+                    <dd><input type="email" id="email" name="your-email"></dd>
+
+                    <dt><label for="message">MESSAGE</label></dt>
+                    <dd><textarea id="message" name="your-message"></textarea></dd>
+                </dl>
+                <input type="submit" value="送信">
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer wrapper">
+        <div class="footer__container container">
+            <p class="footer__copyright">&copy; 2026 My Work</p>
+        </div>
+    </footer>
+
+</body>
+</html>
