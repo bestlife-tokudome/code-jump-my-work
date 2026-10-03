@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+$break-point_sp: 600px;
+$font-color: #24292e;
+$font-size_small: 14.4px;
+$font-size_large: 24px;
+$border-color: #c8c8c8;
+$width_content: 960px;
+
+@mixin media-sp($bp) {
+    @media screen and (max-width: $bp ){
+        @content;
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: $font-color;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $font-color;
+}
+
+img {
+    width: 100%;
+}
+
+.wrapper {
+    margin: 80px auto;
+}
+
+@include media-sp($break-point_sp){
+    .wrapper {
+        margin: 20px auto;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: $width_content;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.section-title {
+    justify-self: center;
+    margin-bottom: 65px;
+    font-size: $font-size_large;
+}
+
+.icon-instagram {
+    width: 20px;
+    height: 20px;
+}
+
+.header {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 120px;
+    }
+
+    &__nav ul {
+        display: flex;
+    }
+
+    li {
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+    }
+
+    .instagram {
+        display: flex;
+        align-items: center;
+
+        img {
+        width: 20px;
+        height: 20px;
+        margin-bottom: -3px;
+        }
+    }
+
+    @include media-sp($break-point_sp) {
+        &__container {
+            display: block;
+            text-align: center;
+        }
+
+        &__nav ul{
+            justify-content: center;
+        }
+    }
+}
+
+.main-visual {
+
+    &__image {
+
+        img {
+            max-width: 1920px;
+            height: 420px;
+            object-fit: cover;
+        }
+    }
+}
+
+.about {
+    p {
+        font-size: $font-size_small;
+    }
+
+    &__name {
+        margin-bottom: 30px;
+    }
+
+    .info-email {
+        margin-bottom: 30px;
+    }
+}
+
+.works {
+    margin: 130px 0;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        li {
+            width: calc((100% - 50px)/ 3);
+        }
+    }
+
+    @include media-sp($break-point_sp) {
+        margin: 40px 0;
+
+        &__list {
+            display: block;
+
+            li {
+                width: 100%;
+                margin-bottom: 24px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.news {
+    &__list {
+        width: 100%;
+    }
+
+    tr {
+        display: flex;
+        padding: 16px 0;
+        border-bottom: 1px solid $border-color;
+
+        &:first-child {
+            border-top: 1px solid $border-color;
+        }
+    }
+
+    th {
+        display: inline-block;
+        margin-right: 80px;
+    }
+
+    th, td {
+        font-size: $font-size_small;
+        letter-spacing: 0.2em;
+    }
+
+    @include media-sp($break-point_sp) {
+        tr {
+            display: block;
+            padding: 10px 0;
+        }
+
+        th, td {
+            letter-spacing: normal;
+        }
+    }
+}
+
+.contact {
+    &__form {
+        dl {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        dt {
+            width: 20%;
+            font-size: $font-size_small;
+        }
+
+        dd {
+            width: 80%;
+            font-size: $font-size_small;
+        }
+
+        input, textarea {
+            border: solid 1px $border-color;
+        }
+
+        input {
+            width: 100%;
+            height: 2rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 10rem;
+        }
+
+        .button {
+            display: flex;
+            width: 200px;
+            height: 50px;
+            justify-self: center;
+            background-color: $font-color;
+            color: #fff;
+        }
+    }
+
+    @include media-sp($break-point_sp) {
+        margin-bottom: 80px;
+
+        &__form {
+            dl {
+                display: block;
+            }
+
+            dt, dd {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $font-color;
+    margin: 0 auto;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    p {
+        color: #fff;
+        font-size: 10px;
+    }
+}
